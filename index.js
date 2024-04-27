@@ -14,7 +14,7 @@ const {
   returnBook,
 } = require("./books");
 
-const PORT = 4040;
+const PORT = process.env.PORT || 4040;
 
 function requestHandler(req, res) {
   if (req.url === "/users" && req.method === "GET") {
